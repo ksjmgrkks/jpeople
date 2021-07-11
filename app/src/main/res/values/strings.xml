@@ -1,4 +1,41 @@
 <resources>
-    <string name="app_name">JPeople</string>
+    <string name="app_name">제이피플</string>
     <string name="email">이메일</string>
+    <string name="password_form">영문, 숫자, 특수문자 8 ~ 16자</string>
+    <string name="share">공유하기</string>
+    <string name="update">수정하기</string>
+    <string name="delete">삭제하기</string>
+    <string-array name="Image_Pick">
+        <item>"카메라에서 가져오기"</item>
+        <item>"갤러리에서 가져오기"</item>
+        <item>"기본 이미지로 변경하기"</item>
+    </string-array>
+    <string-array name="Chat_Image_Pick">
+        <item>"카메라에서 가져오기"</item>
+        <item>"갤러리에서 가져오기"</item>
+    </string-array>
+    <string-array name="noteMenu">
+        <item>"설교노트 공유하기"</item>
+        <item>"설교노트 수정하기"</item>
+        <item>"설교노트 삭제하기"</item>
+    </string-array>
+    <string-array name="CommunityMenu">
+        <item>"게시물 공유하기"</item>
+        <item>"게시물 수정하기"</item>
+        <item>"게시물 삭제하기"</item>
+    </string-array>
+    <string-array name="CommunityMenuShare">
+        <item>"게시물 공유하기"</item>
+    </string-array>
+    <string-array name="Yes_Or_No">
+        <item>"예"</item>
+        <item>"아니요"</item>
+    </string-array>
+    <string-array name="offering">
+        <item>"헌금 종류를 선택해주세요"</item>
+        <item>"감사 헌금"</item>
+        <item>"십일조 헌금"</item>
+        <item>"선교헌금"</item>
+        <item>"건축헌금"</item>
+    </string-array>
 </resources>

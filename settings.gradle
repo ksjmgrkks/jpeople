@@ -1,2 +1,5 @@
+include ':mail'
+include ':additionnal'
+include ':activation'
 include ':app'
 rootProject.name = "My Application"

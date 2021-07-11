@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView_cr_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/nbold"
+        android:text="청년1부 A순"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_cr_writer"
+        app:layout_constraintStart_toEndOf="@+id/textView_cr_writer" />
+
+    <TextView
+        android:id="@+id/textView_cr_writer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/nbold"
+        android:text="김이름"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_cr_profile"
+        app:layout_constraintTop_toTopOf="@+id/imageView_cr_profile" />
+
+    <TextView
+        android:id="@+id/textView_cr_contents"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:text="대댓글 내용"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_cr_writer"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cr_writer" />
+
+    <ImageView
+        android:id="@+id/imageView_cr_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/firstprofile" />
+
+    <TextView
+        android:id="@+id/textView_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nbold"
+        android:text="지난 시간"
+        app:layout_constraintStart_toStartOf="@+id/textView_cr_contents"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cr_contents" />
+
+    <TextView
+        android:id="@+id/textView_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nbold"
+        android:text="답글 달기"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/textView_time"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cr_contents" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

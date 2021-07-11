@@ -1,31 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_jpeoplelogo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_jpeoplelogo_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
-        <activity android:name=".FindPasswordActivity"
-            android:parentActivityName=".LoginActivity" />
-        <activity
-            android:name=".SignupActivity"
-            android:parentActivityName=".TermsActivity" />
-        <activity
-            android:name=".TermsActivity"
-            android:parentActivityName=".LoginActivity" />
-        <activity android:name=".LoginActivity">
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name=".SproutMeeting.SproutUpdateActivity"></activity>
+        <activity android:name=".MyPage.QRCheck.QRCheckActivity" />
+        <activity android:name=".Test.Expandable.ExpandableActivity" />
+        <activity android:name=".Test.ViewPager2.ViewpagerActivity" />
+        <activity android:name=".Community.Like.LikeActivity" />
+        <activity android:name=".Home.YoutubeActivity" />
+        <activity android:name=".Community.Comment.CommentActivity" />
+        <activity android:name=".Community.CommunityWriteActivity" />
+        <activity android:name=".Test.MainActivity" />
+        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".MyPage.Manage.OfferingConfirm.OfferingConfirmActivity" />
+        <activity android:name=".MyPage.Offering.PayActivity" />
+        <activity android:name=".MyPage.Note.NoteWriteActivity" />
+        <activity android:name=".Community.CommunityActivity" />
+        <activity android:name=".SproutMeeting.SproutMeetingActivity" />
+        <activity android:name=".MyPage.Offering.OfferingActivity" />
+        <activity android:name=".MyPage.Note.NoteActivity" />
+        <activity android:name=".MyPage.Manage.TermsConfirmActivity" />
+        <activity android:name=".MyPage.Manage.PasswordChangeActivity" />
+        <activity android:name=".MyPage.Manage.ManageActivity" />
+        <activity android:name=".MyPage.MyPageActivity" />
+        <activity android:name=".Login.LoadingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Home.HomeActivity" />
+        <activity android:name=".Login.PasswordfindActivity" />
+        <activity android:name=".Login.SignupActivity" />
+        <activity android:name=".Login.TermsActivity" />
+        <activity android:name=".Test.EnterActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.myapplication.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TermsActivity">
+    tools:context=".Login.TermsActivity">
 
     <TextView
         android:id="@+id/textview_signup"
@@ -13,6 +13,7 @@
         android:layout_marginTop="50dp"
         android:text="회원가입 약관"
         android:textSize="30sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +36,7 @@
                 android:id="@+id/textView_terms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dotum"
                 android:text="TextView" />
         </LinearLayout>
     </ScrollView>
@@ -58,6 +60,7 @@
                 android:id="@+id/textView_privacy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dotum"
                 android:text="TextView" />
         </LinearLayout>
     </ScrollView>
@@ -69,6 +72,7 @@
         android:layout_marginEnd="55dp"
         android:layout_marginRight="55dp"
         android:text="이용약관 동의"
+        android:fontFamily="@font/nbold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView_terms" />
 
@@ -79,6 +83,7 @@
         android:layout_marginEnd="55dp"
         android:layout_marginRight="55dp"
         android:text="개인정보처리방침 동의"
+        android:fontFamily="@font/nbold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView_privacy" />
 
@@ -88,6 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="확인"
+        android:fontFamily="@font/nbold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkbox_privacy" />
