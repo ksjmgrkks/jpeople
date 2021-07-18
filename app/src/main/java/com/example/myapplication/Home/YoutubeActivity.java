@@ -34,7 +34,7 @@ public class YoutubeActivity extends YouTubeBaseActivity {
     YouTubePlayer player;
 
     private static String API_KEY = "AIzaSyBzrwOjwQwKlw7wOFjJxwHm1d19dA4nH1k";
-    private static String videoID = "pX-g5VsSwyI";
+    String videoID = "pX-g5VsSwyI";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,27 @@ public class YoutubeActivity extends YouTubeBaseActivity {
 
         final EditText edittextTitle = findViewById(R.id.edittext_title);
         final EditText edittextContents = findViewById(R.id.edittext_contents);
+
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try{
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean success = jsonResponse.getBoolean("success");
+                    if(success){ //로그인에 성공한 경우
+                        videoID = jsonResponse.getString("sermonLink");
+                        Toast.makeText(YoutubeActivity.this, videoID,Toast.LENGTH_SHORT).show();
+                    } else { //로그인에 실패한 경우
+                        Toast.makeText(YoutubeActivity.this, "설교 로딩에 실패하였습니다.",Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        };
+        SermonReadRequest sermonReadRequest = new SermonReadRequest("live", responseListener);
+        RequestQueue queue = Volley.newRequestQueue(YoutubeActivity.this);
+        queue.add(sermonReadRequest);
 
         initPlayer();
         ImageView liveStrart = findViewById(R.id.imageView_live_start);

@@ -48,9 +48,9 @@
 
     <ImageView
         android:id="@+id/imageView_live_start"
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:src="@drawable/liveex"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:src="@drawable/sermonimage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
