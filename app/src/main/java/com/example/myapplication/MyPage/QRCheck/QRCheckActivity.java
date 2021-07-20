@@ -32,7 +32,6 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.example.myapplication.MyPage.MyPageActivity;
 import com.example.myapplication.MyPage.ProfileDeleteRequest;
 import com.example.myapplication.R;
 

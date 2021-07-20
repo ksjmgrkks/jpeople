@@ -22,7 +22,8 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".SproutMeeting.SproutUpdateActivity"></activity>
+        <activity android:name=".Test.Navigation.NavigationActivity"></activity>
+        <activity android:name=".SproutMeeting.SproutUpdateActivity" />
         <activity android:name=".MyPage.QRCheck.QRCheckActivity" />
         <activity android:name=".Test.Expandable.ExpandableActivity" />
         <activity android:name=".Test.ViewPager2.ViewpagerActivity" />
