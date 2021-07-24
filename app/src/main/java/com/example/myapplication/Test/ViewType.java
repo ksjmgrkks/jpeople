@@ -6,4 +6,5 @@ public class ViewType{
     public static final int RIGHT_CHAT = 2;
     public static final int LEFT_IMAGE = 3;
     public static final int RIGHT_IMAGE = 4;
+
 }

@@ -8,6 +8,9 @@ public class RoomData {
         this.username = username;
         this.roomNumber = roomNumber;
     }
+  public int SumTool(int sum1, int sum2) {
+      return sum1 + sum2;
+  }
 
     public String getUsername() {
         return username;
@@ -25,3 +28,4 @@ public class RoomData {
         this.roomNumber = roomNumber;
     }
 }
+
